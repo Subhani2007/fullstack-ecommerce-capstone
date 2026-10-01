@@ -1,9 +1,316 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>E-Commerce App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopNova | E-Commerce</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Full Stack E-Commerce Project</h1>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🛍️ ShopNova
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="showCart()">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO SHOPNOVA</p>
+
+            <h1>
+                Shop Smart.<br>
+                <span>Live Better.</span>
+            </h1>
+
+            <p>
+                Discover premium products at amazing prices.
+                Everything you need, all in one place.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                Shop Now →
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            🛍️
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="feature">
+            <div>🚚</div>
+            <h3>Free Delivery</h3>
+            <p>Free shipping on orders above ₹999</p>
+        </div>
+
+        <div class="feature">
+            <div>🔒</div>
+            <h3>Secure Payment</h3>
+            <p>100% secure payment system</p>
+        </div>
+
+        <div class="feature">
+            <div>↩️</div>
+            <h3>Easy Returns</h3>
+            <p>7-day easy return policy</p>
+        </div>
+
+        <div class="feature">
+            <div>⭐</div>
+            <h3>Best Quality</h3>
+            <p>Premium quality products</p>
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+            <p>OUR COLLECTION</p>
+            <h2>Featured Products</h2>
+        </div>
+
+        <div class="products">
+
+            <div class="product-card">
+
+                <div class="product-image headphone">
+                    🎧
+                </div>
+
+                <div class="product-info">
+                    <span>Electronics</span>
+
+                    <h3>Wireless Headphones</h3>
+
+                    <p>
+                        Premium wireless headphones
+                        with noise cancellation.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹2,499</strong>
+
+                        <button onclick="addToCart('Wireless Headphones', 2499)">
+                            Add +
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image watch">
+                    ⌚
+                </div>
+
+                <div class="product-info">
+                    <span>Accessories</span>
+
+                    <h3>Smart Watch</h3>
+
+                    <p>
+                        Stylish smartwatch with
+                        fitness tracking features.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹3,999</strong>
+
+                        <button onclick="addToCart('Smart Watch', 3999)">
+                            Add +
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image shoes">
+                    👟
+                </div>
+
+                <div class="product-info">
+                    <span>Fashion</span>
+
+                    <h3>Running Shoes</h3>
+
+                    <p>
+                        Comfortable and lightweight
+                        shoes for everyday use.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹1,899</strong>
+
+                        <button onclick="addToCart('Running Shoes', 1899)">
+                            Add +
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image laptop">
+                    💻
+                </div>
+
+                <div class="product-info">
+                    <span>Electronics</span>
+
+                    <h3>Premium Laptop</h3>
+
+                    <p>
+                        Powerful laptop for work,
+                        study and entertainment.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹54,999</strong>
+
+                        <button onclick="addToCart('Premium Laptop', 54999)">
+                            Add +
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div>
+            <p class="small-title">ABOUT US</p>
+
+            <h2>Your Trusted Online Store</h2>
+
+            <p>
+                ShopNova is a modern e-commerce platform designed
+                to provide a simple, secure and enjoyable shopping
+                experience.
+            </p>
+
+            <button class="learn-btn">
+                Learn More
+            </button>
+        </div>
+
+        <div class="about-box">
+            🛒
+            <h3>Everything You Need</h3>
+            <p>Quality products. Great prices. Fast delivery.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+        <h2>Stay Updated</h2>
+
+        <p>
+            Subscribe to receive new product updates and offers.
+        </p>
+
+        <div class="subscribe">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribeUser()">
+                Subscribe
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <div>
+            <h2>🛍️ ShopNova</h2>
+            <p>Your modern shopping destination.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>Products</p>
+            <p>About</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📧 support@shopnova.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 ShopNova. All Rights Reserved.
+    </div>
+
+
+    <script src="app.js"></script>
+
 </body>
 </html>
